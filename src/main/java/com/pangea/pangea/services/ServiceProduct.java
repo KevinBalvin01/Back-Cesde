@@ -35,7 +35,7 @@ public class ServiceProduct {
                 HttpStatus.NOT_FOUND, "Doesn't exist"
             );
         }
-        this.repositoryProduct.deleteById(id);;
+        this.repositoryProduct.deleteById(id);
     }
 
 
