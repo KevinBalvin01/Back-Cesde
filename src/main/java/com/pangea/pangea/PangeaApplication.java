@@ -9,5 +9,4 @@ public class PangeaApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(PangeaApplication.class, args);
 	}
-
 }
