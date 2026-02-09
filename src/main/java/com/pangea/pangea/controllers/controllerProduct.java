@@ -42,19 +42,19 @@ public class controllerProduct {
                     {"message":"check the entered fields"}
                     """)))
     })
-    public ResponseEntity<Product> guardar(@RequestBody Product datos) {
+    public ResponseEntity<Product> saveProductController(@RequestBody Product datos) {
         Product respuesta = this.service.saveProduct(datos);
         return ResponseEntity.status(HttpStatus.OK).body(respuesta);
     }
 
     @GetMapping
-    public ResponseEntity<List<Product>> buscarTodos() {
+    public ResponseEntity<List<Product>> searchAllProductsController() {
         List<Product> lista = this.service.searchProduct();
         return ResponseEntity.status(HttpStatus.OK).body(lista);
     }
 
     @DeleteMapping("/{id}")
-    public ResponseEntity<Void> eliminar(@PathVariable Integer id) {
+    public ResponseEntity<Void> deleteProductbyIdController(@PathVariable Integer id) {
         this.service.deleteProductById(id);
         return ResponseEntity.status(HttpStatus.OK).build();
     }
